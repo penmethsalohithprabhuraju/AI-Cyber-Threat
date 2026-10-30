@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     ADMIN_EMAIL: str = "admin@cti.local"
     ADMIN_PASSWORD: str = "AdminPassword123!"
 
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000", "http://localhost:80"]
 
     class Config:
         env_file = ".env"
