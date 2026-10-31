@@ -28,7 +28,7 @@ const Login = () => {
       await authService.googleLogin(response.credential);
       navigate('/');
     } catch (err) {
-      setError(err.response?.data?.detail || 'Google sign-in failed. Try again.');
+      setError(err.response?.data?.detail || err.message || 'Google sign-in failed. Try again.');
     } finally {
       setLoading(false);
     }
