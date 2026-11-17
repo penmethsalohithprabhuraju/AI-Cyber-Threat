@@ -66,7 +66,7 @@ async def seed_database():
         await db_instance.users.insert_one(admin_dict)
         logger.info(f"Database seeded with default Admin user: {settings.ADMIN_EMAIL}")
 
-    # 2. Always fetch fresh threats from real API on startup
+    # 2. Fetch threats from real API on startup
     await fetch_and_store_threats()
 
 @asynccontextmanager
